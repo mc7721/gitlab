@@ -1,0 +1,934 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "3",
+        "title": "GitLab API",
+        "description": "",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/gitlab.com\/api\/v3"
+    ],
+    "paths": {
+        "\/groups": {
+            "get": {
+                "summary": "List groups",
+                "description": "Get a list of groups. (As user: my groups, as admin: all groups)",
+                "operationId": "ListGroups",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Project"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/groups\/{id}\/projects": {
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "get": {
+                "summary": "List a group's projects",
+                "description": "Get a list of projects in this group.",
+                "operationId": "ListGroupProjects",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "archived",
+                        "in": "query",
+                        "description": "if passed, limit by archived status"
+                    },
+                    {
+                        "name": "visibility",
+                        "in": "query",
+                        "description": "if passed, limit by visibility `public`, `internal`, `private`"
+                    },
+                    {
+                        "name": "order_by",
+                        "in": "query",
+                        "description": "Return requests ordered by `id`, `name`, `path`, `created_at`, `updated_at` or `last_activity_at` fields. Default is `created_at"
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Return requests sorted in `asc` or `desc` order. Default is `desc`"
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "description": "Return list of authorized projects according to a search criteria"
+                    },
+                    {
+                        "name": "ci_enabled_first",
+                        "in": "query",
+                        "description": "Return projects ordered by ci_enabled flag. Projects with enabled GitLab CI go first"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Project"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/projects": {
+            "get": {
+                "summary": "List projects",
+                "description": "Get a list of projects for which the authenticated user is a member.",
+                "operationId": "ListProjects",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "archived",
+                        "in": "query",
+                        "description": "if passed, limit by archived status"
+                    },
+                    {
+                        "name": "visibility",
+                        "in": "query",
+                        "description": "if passed, limit by visibility `public`, `internal`, `private`"
+                    },
+                    {
+                        "name": "order_by",
+                        "in": "query",
+                        "description": "Return requests ordered by `id`, `name`, `path`, `created_at`, `updated_at` or `last_activity_at` fields. Default is `created_at"
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Return requests sorted in `asc` or `desc` order. Default is `desc`"
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "description": "Return list of authorized projects according to a search criteria"
+                    },
+                    {
+                        "name": "simple",
+                        "in": "query",
+                        "description": "Return only the ID, URL, name, and path of each project"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Project"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/projects\/{id}": {
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "get": {
+                "summary": "Get single project",
+                "description": "Get a specific project, identified by project ID or NAMESPACE\/PROJECT_NAME, which is owned by the authenticated user. If using namespaced projects call make sure that the NAMESPACE\/PROJECT_NAME is URL-encoded, eg. \/api\/v3\/projects\/diaspora%2Fdiaspora (where \/ is represented by %2F).",
+                "operationId": "GetProject",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Project"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/projects\/{id}\/repository\/branches": {
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "get": {
+                "summary": "List branches",
+                "description": "Lists all branches of a project.",
+                "operationId": "ListBranches",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Project"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/projects\/{id}\/repository\/tags": {
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "get": {
+                "summary": "List project repository tags",
+                "description": "Get a list of repository tags from a project, sorted by name in reverse alphabetical order.",
+                "operationId": "ListTags",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Project"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/projects\/{id}\/merge_requests": {
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "get": {
+                "summary": "List merge requests",
+                "description": "Get all merge requests for this project. The state parameter can be used to get only merge requests with a given state (`opened`, `closed`, or `merged`) or all of them (`all`). The pagination parameters `page` and `per_page` can be used to restrict the list of merge requests.",
+                "operationId": "ListMergeRequests",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "iid",
+                        "in": "query",
+                        "description": "Return the request having the given `iid`"
+                    },
+                    {
+                        "name": "state",
+                        "in": "query",
+                        "description": "Return `all` requests or just those that are `merged`, `opened` or `closed`"
+                    },
+                    {
+                        "name": "order_by",
+                        "in": "query",
+                        "description": "Return requests ordered by `id`, `name`, `path`, `created_at`, `updated_at` or `last_activity_at` fields. Default is `created_at"
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "Return requests sorted in `asc` or `desc` order. Default is `desc`"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Project"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create MR",
+                "description": "Creates a new merge request.",
+                "operationId": "CreateMergeRequest",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "source_branch",
+                        "in": "query",
+                        "description": "The source branch"
+                    },
+                    {
+                        "name": "target_branch",
+                        "in": "query",
+                        "description": "The target branch"
+                    },
+                    {
+                        "name": "assignee_id",
+                        "in": "query",
+                        "description": "Assignee user ID"
+                    },
+                    {
+                        "name": "title",
+                        "in": "query",
+                        "description": "Title of MR"
+                    },
+                    {
+                        "name": "description",
+                        "in": "query",
+                        "description": "Description of MR"
+                    },
+                    {
+                        "name": "target_project_id",
+                        "in": "query",
+                        "description": "The target project (numeric id)"
+                    },
+                    {
+                        "name": "labels",
+                        "in": "query",
+                        "description": "Labels for MR as a comma-separated list"
+                    },
+                    {
+                        "name": "milestone_id",
+                        "in": "query",
+                        "description": "Milestone ID"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Project"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/projects\/{id}\/merge_requests\/{merge_request_id}": {
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "put": {
+                "summary": "Update MR",
+                "description": "Updates an existing merge request. You can change the target branch, title, or even close the MR.",
+                "operationId": "UpdateMergeRequest",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "target_branch",
+                        "in": "query",
+                        "description": "The target branch"
+                    },
+                    {
+                        "name": "assignee_id",
+                        "in": "query",
+                        "description": "Assignee user ID"
+                    },
+                    {
+                        "name": "title",
+                        "in": "query",
+                        "description": "Title of MR"
+                    },
+                    {
+                        "name": "description",
+                        "in": "query",
+                        "description": "Description of MR"
+                    },
+                    {
+                        "name": "state_event",
+                        "in": "query",
+                        "description": "New state (close|reopen|merge)"
+                    },
+                    {
+                        "name": "labels",
+                        "in": "query",
+                        "description": "Labels for MR as a comma-separated list"
+                    },
+                    {
+                        "name": "milestone_id",
+                        "in": "query",
+                        "description": "Milestone ID"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Project"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/projects\/{id}\/merge_requests\/{merge_request_id}\/merge": {
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "put": {
+                "summary": "Accept MR",
+                "description": "Merge changes submitted with MR using this API. If the merge succeeds you'll get a 200 OK. If it has some conflicts and can not be merged - you'll get a 405 and the error message 'Branch cannot be merged' If merge request is already merged or closed - you'll get a 406 and the error message 'Method Not Allowed' If the sha parameter is passed and does not match the HEAD of the source - you'll get a 409 and the error message 'SHA does not match HEAD of source branch' If you don't have permissions t",
+                "operationId": "AcceptMergeRequest",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Project"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/projects\/{id}\/snippets": {
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "get": {
+                "summary": "List snippets",
+                "description": "Lists all snippets of a project.",
+                "operationId": "ListSnippets",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Project"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create Snippet",
+                "description": "Creates a new project snippet. The user must have permission to create new snippets.",
+                "operationId": "CreateSnippet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "title",
+                        "in": "query",
+                        "description": "Title of MR"
+                    },
+                    {
+                        "name": "file_name",
+                        "in": "query",
+                        "description": "The name of a snippet file"
+                    },
+                    {
+                        "name": "code",
+                        "in": "query",
+                        "description": "The content of a snippet"
+                    },
+                    {
+                        "name": "visibility_level",
+                        "in": "query",
+                        "description": "The snippet's visibility"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Project"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/projects\/{id}\/snippets\/{snippet_id}": {
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "get": {
+                "summary": "Single Snippet",
+                "description": "Get a single project snippet.",
+                "operationId": "GetSnippet",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Project"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Single Snippet",
+                "description": "Get a single project snippet.",
+                "operationId": "UpdateSnippet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "title",
+                        "in": "query",
+                        "description": "Title of MR"
+                    },
+                    {
+                        "name": "file_name",
+                        "in": "query",
+                        "description": "The name of a snippet file"
+                    },
+                    {
+                        "name": "code",
+                        "in": "query",
+                        "description": "The content of a snippet"
+                    },
+                    {
+                        "name": "visibility_level",
+                        "in": "query",
+                        "description": "The snippet's visibility"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Project"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete Snippet",
+                "description": "Deletes an existing project snippet.",
+                "operationId": "DeleteSnippet",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Project"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/projects\/{id}\/snippets\/{snippet_id}\/raw": {
+            "parameters": {
+                "summary": "",
+                "description": "",
+                "operationId": "",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "get": {
+                "summary": "Snippet content",
+                "description": "Returns the raw project snippet as plain text.",
+                "operationId": "GetSnippetContent",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/Project"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Group": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "path": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Project": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "default_branch": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "public": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "visibility_level": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "ssh_url_to_repo": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "http_url_to_repo": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "web_url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "tag_list": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "owner": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name_with_namespace": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "path": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "path_with_namespace": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "issues_enabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "merge_requests_enabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "builds_enabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "wiki_enabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "snippets_enabled": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "last_activity_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "creator_id": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "namespace": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "archived": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "avatar_url": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "tag_list": {
+                "type": "array"
+            },
+            "owner": {
+                "type": "object"
+            },
+            "namespace": {
+                "type": "object"
+            },
+            "Branch": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "commit": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "protected": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "commit": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Tag": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "commit": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "MergeRequest": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "iid": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "target_branch": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "source_branch": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "project_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "upvotes": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "downvotes": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "author": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "assignee": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "source_project_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "target_project_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "labels": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "work_in_progress": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "milestone": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "merge_when_build_succeeds": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "merge_status": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "subscribed": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "user_notes_count": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "author": {
+                "type": "object"
+            },
+            "assignee": {
+                "type": "object"
+            },
+            "labels": {
+                "type": "array"
+            },
+            "milestone": {
+                "type": "object"
+            },
+            "Snippets": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "file_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "author": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "expires_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "web_url": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
