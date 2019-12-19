@@ -1,0 +1,123 @@
+{
+    "name": "GitLab",
+    "description": "<p>GitLab is a web-based Git-repository manager with wiki, issue-tracking and CI\/CD pipelines features, using an open-source license, developed by GitLab Inc.&nbsp;<\/p>",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/githlab-logo.png",
+    "tags": [
+        "code",
+        "have api",
+        "have swagger",
+        "orchestration",
+        "relative data",
+        "service api",
+        "static",
+        "versioning",
+        "webhook implementations"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/gitlab\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "API title",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/githlab-logo.png",
+            "humanURL": "http:\/\/gitlab.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/api-title-openapi.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/api-title.json"
+                }
+            ]
+        },
+        {
+            "name": "GitLab API",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/githlab-logo.png",
+            "humanURL": "http:\/\/gitlab.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/gitlab-api-openapi.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/gitlab-api.json"
+                }
+            ]
+        },
+        {
+            "name": "Gitlab",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/githlab-logo.png",
+            "humanURL": "http:\/\/gitlab.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/gitlab-openapi.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/gitlab.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Documentation",
+            "url": "https:\/\/docs.gitlab.com\/"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/gitlab"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28847-2019-09-04-00-36-57.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28847-2019-09-03-14-51-14.json"
+        },
+        {
+            "type": "Pricing",
+            "url": "https:\/\/about.gitlab.com\/pricing\/"
+        },
+        {
+            "type": "Privacy Policy",
+            "url": "https:\/\/about.gitlab.com\/privacy\/"
+        },
+        {
+            "type": "Support",
+            "url": "https:\/\/about.gitlab.com\/getting-help\/"
+        },
+        {
+            "type": "Terms of Service",
+            "url": "https:\/\/about.gitlab.com\/terms\/"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/gitlab"
+        },
+        {
+            "type": "Webhooks",
+            "url": "https:\/\/docs.gitlab.com\/ce\/user\/project\/integrations\/webhooks.html"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/gitlab.com"
+        }
+    ]
+}
