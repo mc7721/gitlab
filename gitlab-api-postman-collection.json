@@ -1,0 +1,891 @@
+{
+    "id": "ad795acf383dbf4cce4330dd7f230efd",
+    "name": "GitLab API",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "8821d847130c160987fc0af026e45add",
+            "name": "List groups",
+            "url": "http:\/\/gitlab.com\/api\/v3\/groups",
+            "description": "Get a list of groups. (As user: my groups, as admin: all groups)",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "9e6082170a9503b9db7d6f8838873160",
+            "name": "",
+            "url": "http:\/\/gitlab.com\/api\/v3\/groups\/{id}\/projects",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "parameters",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "2d404d28819087d9aa692e42bf33ba19",
+            "name": "List a group's projects",
+            "url": "http:\/\/gitlab.com\/api\/v3\/groups\/{id}\/projects",
+            "description": "Get a list of projects in this group.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "archived",
+                    "description": "if passed, limit by archived status",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "visibility",
+                    "description": "if passed, limit by visibility `public`, `internal`, `private`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "order_by",
+                    "description": "Return requests ordered by `id`, `name`, `path`, `created_at`, `updated_at` or `last_activity_at` fields. Default is `created_at",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sort",
+                    "description": "Return requests sorted in `asc` or `desc` order. Default is `desc`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "search",
+                    "description": "Return list of authorized projects according to a search criteria",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ci_enabled_first",
+                    "description": "Return projects ordered by ci_enabled flag. Projects with enabled GitLab CI go first",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "47748b327acc53a31dd2a53825ace555",
+            "name": "List projects",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects",
+            "description": "Get a list of projects for which the authenticated user is a member.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "archived",
+                    "description": "if passed, limit by archived status",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "visibility",
+                    "description": "if passed, limit by visibility `public`, `internal`, `private`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "order_by",
+                    "description": "Return requests ordered by `id`, `name`, `path`, `created_at`, `updated_at` or `last_activity_at` fields. Default is `created_at",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sort",
+                    "description": "Return requests sorted in `asc` or `desc` order. Default is `desc`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "search",
+                    "description": "Return list of authorized projects according to a search criteria",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "simple",
+                    "description": "Return only the ID, URL, name, and path of each project",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "9c69338c6a1ba014854b914b8f9ce36a",
+            "name": "",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "parameters",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "962195e8bb998a146cfe8834c9796243",
+            "name": "Get single project",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}",
+            "description": "Get a specific project, identified by project ID or NAMESPACE\/PROJECT_NAME, which is owned by the authenticated user. If using namespaced projects call make sure that the NAMESPACE\/PROJECT_NAME is URL-encoded, eg. \/api\/v3\/projects\/diaspora%2Fdiaspora (where \/ is represented by %2F).",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "b1154942ab4e0e4f9c6fa109366670e4",
+            "name": "",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/repository\/branches",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "parameters",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "e6d85b59e11720e594e9593d68077cc7",
+            "name": "List branches",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/repository\/branches",
+            "description": "Lists all branches of a project.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "2ab15da1d566f54bae1bcaf0e3ecb80f",
+            "name": "",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/repository\/tags",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "parameters",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "3a7aa95cfca55c9e6e2707a6383e5d08",
+            "name": "List project repository tags",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/repository\/tags",
+            "description": "Get a list of repository tags from a project, sorted by name in reverse alphabetical order.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "921ed0f9948eff118c5f68a63dc45baf",
+            "name": "",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/merge_requests",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "parameters",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "387793b2f3fc40c6fd9ee039428a5456",
+            "name": "List merge requests",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/merge_requests",
+            "description": "Get all merge requests for this project. The state parameter can be used to get only merge requests with a given state (`opened`, `closed`, or `merged`) or all of them (`all`). The pagination parameters `page` and `per_page` can be used to restrict the list of merge requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "iid",
+                    "description": "Return the request having the given `iid`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "state",
+                    "description": "Return `all` requests or just those that are `merged`, `opened` or `closed`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "order_by",
+                    "description": "Return requests ordered by `id`, `name`, `path`, `created_at`, `updated_at` or `last_activity_at` fields. Default is `created_at",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sort",
+                    "description": "Return requests sorted in `asc` or `desc` order. Default is `desc`",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "4997e172e6901ec9ab326c460fda4f46",
+            "name": "Create MR",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/merge_requests",
+            "description": "Creates a new merge request.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "source_branch",
+                    "description": "The source branch",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "target_branch",
+                    "description": "The target branch",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "assignee_id",
+                    "description": "Assignee user ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "title",
+                    "description": "Title of MR",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "description",
+                    "description": "Description of MR",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "target_project_id",
+                    "description": "The target project (numeric id)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "labels",
+                    "description": "Labels for MR as a comma-separated list",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "milestone_id",
+                    "description": "Milestone ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "261012f620e065c17a7ac34a26006564",
+            "name": "",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/merge_requests\/{merge_request_id}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "parameters",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "92aa1c6ca6ba522d51f6ec347fb65732",
+            "name": "Update MR",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/merge_requests\/{merge_request_id}",
+            "description": "Updates an existing merge request. You can change the target branch, title, or even close the MR.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "target_branch",
+                    "description": "The target branch",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "assignee_id",
+                    "description": "Assignee user ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "title",
+                    "description": "Title of MR",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "description",
+                    "description": "Description of MR",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "state_event",
+                    "description": "New state (close|reopen|merge)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "labels",
+                    "description": "Labels for MR as a comma-separated list",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "milestone_id",
+                    "description": "Milestone ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "a4508e66501079d3eeb3307c94270f46",
+            "name": "",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/merge_requests\/{merge_request_id}\/merge",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "parameters",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "91827057689e76c925966265f17b2583",
+            "name": "Accept MR",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/merge_requests\/{merge_request_id}\/merge",
+            "description": "Merge changes submitted with MR using this API. If the merge succeeds you'll get a 200 OK. If it has some conflicts and can not be merged - you'll get a 405 and the error message 'Branch cannot be merged' If merge request is already merged or closed - you'll get a 406 and the error message 'Method Not Allowed' If the sha parameter is passed and does not match the HEAD of the source - you'll get a 409 and the error message 'SHA does not match HEAD of source branch' If you don't have permissions t",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "ddd96650448afa08aba6a3488b717c09",
+            "name": "",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/snippets",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "parameters",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "6866dd6c4a7138032b71564c61e04470",
+            "name": "List snippets",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/snippets",
+            "description": "Lists all snippets of a project.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "c538316b4afc7032d0ab878c1b2fa6db",
+            "name": "Create Snippet",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/snippets",
+            "description": "Creates a new project snippet. The user must have permission to create new snippets.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "title",
+                    "description": "Title of MR",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file_name",
+                    "description": "The name of a snippet file",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "code",
+                    "description": "The content of a snippet",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "visibility_level",
+                    "description": "The snippet's visibility",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "890aad8ace420aa451defa01f508b275",
+            "name": "",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/snippets\/{snippet_id}",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "parameters",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "3a9545024f33bf4fdcc627a715bac152",
+            "name": "Single Snippet",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/snippets\/{snippet_id}",
+            "description": "Get a single project snippet.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "508bbdf9c4642f0f5487491fe714b3d6",
+            "name": "Single Snippet",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/snippets\/{snippet_id}",
+            "description": "Get a single project snippet.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "title",
+                    "description": "Title of MR",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file_name",
+                    "description": "The name of a snippet file",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "code",
+                    "description": "The content of a snippet",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "visibility_level",
+                    "description": "The snippet's visibility",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "426da48a30f19a505bb9cd1d1bbb8c9a",
+            "name": "Delete Snippet",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/snippets\/{snippet_id}",
+            "description": "Deletes an existing project snippet.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "fad3f88d189127358501a5999a7935b7",
+            "name": "",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/snippets\/{snippet_id}\/raw",
+            "description": "",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "parameters",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        },
+        {
+            "id": "e9e2f610336db48a47dd37090d88f7a6",
+            "name": "Snippet content",
+            "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/snippets\/{snippet_id}\/raw",
+            "description": "Returns the raw project snippet as plain text.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "rawModeData": ""
+        }
+    ]
+}
