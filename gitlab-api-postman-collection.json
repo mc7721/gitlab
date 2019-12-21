@@ -1,5 +1,5 @@
 {
-    "id": "ad795acf383dbf4cce4330dd7f230efd",
+    "id": "10469fbc7583a81c01a2f2ef061621ab",
     "name": "GitLab API",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "8821d847130c160987fc0af026e45add",
+            "id": "5700d11922e4c4619c2c11ff4bab3cb9",
             "name": "List groups",
             "url": "http:\/\/gitlab.com\/api\/v3\/groups",
             "description": "Get a list of groups. (As user: my groups, as admin: all groups)",
@@ -29,11 +29,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "9e6082170a9503b9db7d6f8838873160",
+            "id": "a7bb1b0968c1a65442442c102fb31494",
             "name": "",
             "url": "http:\/\/gitlab.com\/api\/v3\/groups\/{id}\/projects",
             "description": "",
@@ -52,11 +52,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "2d404d28819087d9aa692e42bf33ba19",
+            "id": "c96b66354c85118d56573c1284a0ee4d",
             "name": "List a group's projects",
             "url": "http:\/\/gitlab.com\/api\/v3\/groups\/{id}\/projects",
             "description": "Get a list of projects in this group.",
@@ -118,11 +118,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "47748b327acc53a31dd2a53825ace555",
+            "id": "a9b5291aeac55272b3bc90f65d4cd8f8",
             "name": "List projects",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects",
             "description": "Get a list of projects for which the authenticated user is a member.",
@@ -184,11 +184,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "9c69338c6a1ba014854b914b8f9ce36a",
+            "id": "42f63f9925279ff02b8abaa401149cfe",
             "name": "",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}",
             "description": "",
@@ -207,11 +207,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "962195e8bb998a146cfe8834c9796243",
+            "id": "c53660e9831a75c92610be548ee581e2",
             "name": "Get single project",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}",
             "description": "Get a specific project, identified by project ID or NAMESPACE\/PROJECT_NAME, which is owned by the authenticated user. If using namespaced projects call make sure that the NAMESPACE\/PROJECT_NAME is URL-encoded, eg. \/api\/v3\/projects\/diaspora%2Fdiaspora (where \/ is represented by %2F).",
@@ -230,11 +230,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "b1154942ab4e0e4f9c6fa109366670e4",
+            "id": "c645cbb2fe5f97bca92f8dfc0020541a",
             "name": "",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/repository\/branches",
             "description": "",
@@ -253,11 +253,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "e6d85b59e11720e594e9593d68077cc7",
+            "id": "8f123e7bed9bda93db54756957e45e44",
             "name": "List branches",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/repository\/branches",
             "description": "Lists all branches of a project.",
@@ -276,11 +276,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "2ab15da1d566f54bae1bcaf0e3ecb80f",
+            "id": "ca6e82fd861b0a2847e30c37068a73e5",
             "name": "",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/repository\/tags",
             "description": "",
@@ -299,11 +299,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "3a7aa95cfca55c9e6e2707a6383e5d08",
+            "id": "e9b1277c08fe6bcb8294fcfd4949795f",
             "name": "List project repository tags",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/repository\/tags",
             "description": "Get a list of repository tags from a project, sorted by name in reverse alphabetical order.",
@@ -322,11 +322,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "921ed0f9948eff118c5f68a63dc45baf",
+            "id": "e43c5fb70b8baa36c926f80ec7b49952",
             "name": "",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/merge_requests",
             "description": "",
@@ -345,11 +345,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "387793b2f3fc40c6fd9ee039428a5456",
+            "id": "95e3f0543e21395f6dd5d4b6cd70aa09",
             "name": "List merge requests",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/merge_requests",
             "description": "Get all merge requests for this project. The state parameter can be used to get only merge requests with a given state (`opened`, `closed`, or `merged`) or all of them (`all`). The pagination parameters `page` and `per_page` can be used to restrict the list of merge requests.",
@@ -397,11 +397,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "4997e172e6901ec9ab326c460fda4f46",
+            "id": "a2770c5d41e611691e1767b6e835c9e7",
             "name": "Create MR",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/merge_requests",
             "description": "Creates a new merge request.",
@@ -477,11 +477,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "261012f620e065c17a7ac34a26006564",
+            "id": "f22340e4e87a9028500d90c2c6c03fdb",
             "name": "",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/merge_requests\/{merge_request_id}",
             "description": "",
@@ -500,11 +500,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "92aa1c6ca6ba522d51f6ec347fb65732",
+            "id": "494c6ff5bc38fd97590f53660a5358be",
             "name": "Update MR",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/merge_requests\/{merge_request_id}",
             "description": "Updates an existing merge request. You can change the target branch, title, or even close the MR.",
@@ -573,11 +573,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "a4508e66501079d3eeb3307c94270f46",
+            "id": "b23d973fa68bc6f56a12d9e7a8967644",
             "name": "",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/merge_requests\/{merge_request_id}\/merge",
             "description": "",
@@ -596,11 +596,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "91827057689e76c925966265f17b2583",
+            "id": "0632ce1e1e23b11be5039dff46a9f4db",
             "name": "Accept MR",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/merge_requests\/{merge_request_id}\/merge",
             "description": "Merge changes submitted with MR using this API. If the merge succeeds you'll get a 200 OK. If it has some conflicts and can not be merged - you'll get a 405 and the error message 'Branch cannot be merged' If merge request is already merged or closed - you'll get a 406 and the error message 'Method Not Allowed' If the sha parameter is passed and does not match the HEAD of the source - you'll get a 409 and the error message 'SHA does not match HEAD of source branch' If you don't have permissions t",
@@ -619,11 +619,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "ddd96650448afa08aba6a3488b717c09",
+            "id": "33145e1192111c755c15fbd0e1e6ea8f",
             "name": "",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/snippets",
             "description": "",
@@ -642,11 +642,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "6866dd6c4a7138032b71564c61e04470",
+            "id": "30d01dfa5fe0d9356002652aefe93a40",
             "name": "List snippets",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/snippets",
             "description": "Lists all snippets of a project.",
@@ -665,11 +665,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "c538316b4afc7032d0ab878c1b2fa6db",
+            "id": "8defa6cb7e609cf7e0f6a3c94d4cf5ec",
             "name": "Create Snippet",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/snippets",
             "description": "Creates a new project snippet. The user must have permission to create new snippets.",
@@ -717,11 +717,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "890aad8ace420aa451defa01f508b275",
+            "id": "82446437ebb8b2f3efafb1b8f98b8e20",
             "name": "",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/snippets\/{snippet_id}",
             "description": "",
@@ -740,11 +740,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "3a9545024f33bf4fdcc627a715bac152",
+            "id": "84cf60bd0c9add5def6db5deb184125f",
             "name": "Single Snippet",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/snippets\/{snippet_id}",
             "description": "Get a single project snippet.",
@@ -763,11 +763,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "508bbdf9c4642f0f5487491fe714b3d6",
+            "id": "f9e08ce639218febe530e81d551d1613",
             "name": "Single Snippet",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/snippets\/{snippet_id}",
             "description": "Get a single project snippet.",
@@ -815,11 +815,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "426da48a30f19a505bb9cd1d1bbb8c9a",
+            "id": "e51f7417333d693c9a63fdf19ce7bc0f",
             "name": "Delete Snippet",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/snippets\/{snippet_id}",
             "description": "Deletes an existing project snippet.",
@@ -838,11 +838,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "fad3f88d189127358501a5999a7935b7",
+            "id": "8a7ecb8283083df0fc2060e02d4da0e0",
             "name": "",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/snippets\/{snippet_id}\/raw",
             "description": "",
@@ -861,11 +861,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         },
         {
-            "id": "e9e2f610336db48a47dd37090d88f7a6",
+            "id": "190d1e5bf3bb0f40d7a2543ade4dcc98",
             "name": "Snippet content",
             "url": "http:\/\/gitlab.com\/api\/v3\/projects\/{id}\/snippets\/{snippet_id}\/raw",
             "description": "Returns the raw project snippet as plain text.",
@@ -884,7 +884,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "ad795acf383dbf4cce4330dd7f230efd",
+            "collectionId": "10469fbc7583a81c01a2f2ef061621ab",
             "rawModeData": ""
         }
     ]
